@@ -1,3 +1,22 @@
+# -*- coding: utf-8 -*-
+'''
+CheeseHacks Diet Reccomender
+
+Created by: Team Cheesy-Weazies
+Members:    Mikhail Ortiz-Lunyov, Yixuan Zheng, Mia Chen, Sojung Lee
+
+This program takes in the user's eating habits,
+ and then returns suggestions for healthier meals
+ as nessesary.
+This program assumes that age is 19 or above.
+
+External Sources:
+    Data Set:
+        https://github.com/soumillll/Diet-Recommendation-System/blob/main/input.csv
+    Calories Needed:
+        https://www.healthline.com/nutrition/how-many-calories-per-day
+        https://www.omnicalculator.com/health/bmr-harris-benedict-equation
+'''
 import pandas as pd
 
 # Step 1: Take user's input is handled by Flask in views.py
