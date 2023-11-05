@@ -16,7 +16,7 @@ This Flask web application is designed to assist users in managing their dietary
 
 - Based on the calculated calorie needs, the application generates a customized diet plan.
 - The diet plan is curated from a dataset of food items, ensuring a variety of choices.
-- Users receive a balanced diet plan that includes options for breakfast, lunch, and dinner.
+- Users receive a balanced diet plan.
 - Introduces category-based quantity caps to prevent the recommendation of excessive amounts of any single item, ensuring a balanced and varied diet.
 
 ### User Feedback and Iteration
