@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan</title>
+</head>
+<body>
+    <div><h1>Your Diet Plan</h1></div>
+    <p>Your daily calorie needs are: {{ calorie_needs }} calories</p>
+    <table>
+        <tr>
+            <th>Food Item</th>
+            <th>Calories</th>
+            <th>Quantity</th>
+        </tr>
+        {% for item in diet_plan %}
+        <tr>
+            <td>{{ item['Food_items'] }}</td>
+            <td>{{ item['Calories'] }}</td>
+            <td>{{ item['Unit'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/feedback" method="post">
+        <label for="feedback">Are you satisfied with the diet plan? You will be directed back home after pressing Yes</label><br>
+        <input type="radio" id="yes" name="feedback" value="Yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="feedback" value="No">
+        <label for="no">No</label><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
