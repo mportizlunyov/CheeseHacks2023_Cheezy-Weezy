@@ -58,7 +58,7 @@ def get_diet_plan(calorie_needs):
     food_data['Unit'] = food_data['Food_items'].apply(lambda x: 'ml' if 'juice' in x.lower() or 'milk' in x.lower() or 'tea' in x.lower() or 'coffee' in x.lower() else 'g')
 
     # Calculate the quantity for each food item and update the 'Unit' column
-    food_data['Unit'] = food_data.apply(lambda row: f"{100 * (calorie_needs / row['Calories']):.2f} {row['Unit']}", axis=1)
+    food_data['Unit'] = food_data.apply(lambda row: f"{40 * (calorie_needs / row['Calories']):.2f} {row['Unit']}", axis=1)
 
     # Filter the food items that fit within the calorie need
     suitable_foods = food_data[food_data['Calories'] <= calorie_needs]
