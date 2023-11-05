@@ -10,13 +10,15 @@ INSTALL_FLASK_Q=""
 INSTALL_Pandas_Q=""
 
 # Checks for python
-if [ "$(python3 --version)" == "127" ] ; then
+python3 --version
+if [ "$?" == "127" ] ; then
     echo "Python is required to run this application"
     echo "Install and try again later"
     exit 1
 fi
 # Checks for pip
-if [ "$(pip --version)" == "127" ] ; then
+pip --version
+if [ "$?" == "127" ] ; then
     echo "Pip is required to run this application"
     VALID_RESPONSE=false
     while [ "$VALID_RESPONSE" != true ] ; do
@@ -35,7 +37,8 @@ if [ "$(pip --version)" == "127" ] ; then
     done
 fi
 # Checks for flask
-if [ "$(flask --version)" == "127" ] ; then
+flask --version
+if [ "$?" == "127" ] ; then
     echo "Flask is required to run this application"
     VALID_RESPONSE=false
     while [ "$VALID_RESPONSE" != true ] ; do
