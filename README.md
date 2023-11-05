@@ -70,12 +70,7 @@ The development of this application was made possible by leveraging the Flask fr
 
 This application is intended for educational and informational purposes only. It should not be used as a substitute for professional medical or dietary advice.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact Information
 
-- Developer: [Your Name]
-- Email: [Your Email]
-- GitHub: [Your GitHub Profile]
+- Developer: Yixuan Zheng, Mikhail Ortiz-Lunyov, Mia Chen
+- Email: zheng282@wisc.edu, ortizlunyov@wisc.edu, mchen452@wisc.edu
