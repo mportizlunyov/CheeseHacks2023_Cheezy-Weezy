@@ -4,6 +4,11 @@
 # This UNIX shell script is intended for setting up and running our
 #  application created for UW-Madison CheeseHacks 2023
 
+INSTALL_PANDAS_Q=""
+INSTALL_PIP_Q=""
+INSTALL_FLASK_Q=""
+INSTALL_Pandas_Q=""
+
 # Checks for python
 if [ "$(python3 --version)" == "127" ] ; then
     echo "Python is required to run this application"
@@ -48,11 +53,32 @@ if [ "$(flask --version)" == "127" ] ; then
         fi
     done
 fi
-
+if [ "$(pip list | grep "pandas")" == "" ] ; then
+    echo "Pandas is required to run this application"
+    VALID_RESPONSE=false
+    while [ "$VALID_RESPONSE" != true ] ; do
+        echo "Install [Y/n]?"
+        read INSTALL_Pandas_Q
+        if [ "$INSTALL_Pandas_Q" == "y" ] || [ "$INSTALL_Pandas_Q" == "Y" ] ; then
+            pip install pandas
+            echo "Done"
+            VALID_RESPONSE=true
+        elif [ "$INSTALL_Pandas_Q" == "n" ] || [ "$INSTALL_Pandas_Q" == "N" ] ; then
+            echo "Install and try again later"
+            exit 1
+        else
+            echo "Sorry, only 'y' or 'n' accepted"
+        fi
+    done
+fi
 
 # Set up environmental values
 #  Name may change with development
-export FLASK_APP=CheeseHacks_Calorie_Reboot_Beta0
 export FLASK_ENV=development
 
-flask run
+# Execute Python backends
+python3 ./backend.py
+export FLASK_APP="views.py"
+python3 ./views.py
+export FLASK_APP="app.py"
+python3 ./app.py
