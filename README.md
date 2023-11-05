@@ -72,5 +72,5 @@ This application is intended for educational and informational purposes only. It
 
 ## Contact Information
 
-- Developer: Yixuan Zheng, Mikhail Ortiz-Lunyov, Mia Chen
-- Email: zheng282@wisc.edu, ortizlunyov@wisc.edu, mchen452@wisc.edu
+- Developer: Yixuan Zheng, Mikhail Ortiz-Lunyov, Mia Chen, Sojung Lee
+- Email: zheng282@wisc.edu, ortizlunyov@wisc.edu, mchen452@wisc.edu, lee2353@wisc.edu
